@@ -21,13 +21,25 @@ WebUI.openBrowser('')
 
 WebUI.navigateToUrl('https://example.testproject.io/web/')
 
-WebUI.setText(findTestObject('Object Repository/Login Page/Page_TestProject Demo/input_Full Name_name'), 'Aditya')
+WebUI.setText(findTestObject('Object Repository/Register Page/Page_TestProject Demo/input_Full Name_name'), 'Aditya')
 
-WebUI.setEncryptedText(findTestObject('Object Repository/Login Page/Page_TestProject Demo/input_Password_password'), 'iGDxf8hSRT4=')
+WebUI.setEncryptedText(findTestObject('Object Repository/Register Page/Page_TestProject Demo/input_Password_password'), 
+    'iGDxf8hSRT4=')
 
-WebUI.click(findTestObject('Object Repository/Login Page/Page_TestProject Demo/button_Login'))
+WebUI.click(findTestObject('Object Repository/Register Page/Page_TestProject Demo/button_Login'))
 
-WebUI.click(findTestObject('Login Page/Page_TestProject Demo/button_Logout'))
+WebUI.selectOptionByValue(findTestObject('Object Repository/Register Page/Page_TestProject Demo/select_AfghanistanAlbaniaAlgeriaAmerican Sa_e5890c'), 
+    'AR', true)
+
+WebUI.setText(findTestObject('Object Repository/Register Page/Page_TestProject Demo/input_Address_address'), 'Jakarta')
+
+WebUI.setText(findTestObject('Object Repository/Register Page/Page_TestProject Demo/input_Email_email'), 'aditya@email.com')
+
+WebUI.setText(findTestObject('Object Repository/Register Page/Page_TestProject Demo/input_Phone_phone'), '123456789')
+
+WebUI.click(findTestObject('Object Repository/Register Page/Page_TestProject Demo/button_Save'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Register Page/Page_TestProject Demo/span_Saved'), 0)
 
 WebUI.closeBrowser()
 
