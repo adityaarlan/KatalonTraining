@@ -27,5 +27,10 @@ WebUI.setEncryptedText(findTestObject('Object Repository/Login Page/Page_TestPro
 
 WebUI.click(findTestObject('Object Repository/Login Page/Page_TestProject Demo/button_Login'))
 
-WebUI.click(findTestObject('Object Repository/Login Page/Page_TestProject Demo/h1_TestProject Example page'))
+WebUI.click(findTestObject('Login Page/Page_TestProject Demo/button_Logout'))
+
+WebUI.verifyElementPresent(findTestObject('Object Repository/Login Page/Page_TestProject Demo/h1_TestProject Example page'), 
+    0)
+
+WebUI.closeBrowser()
 
